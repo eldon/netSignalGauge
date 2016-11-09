@@ -19,13 +19,6 @@ echo 1 > /sys/class/pwm/pwmchip0/pwm0/enable
 # set the period to 1000 us (adjust as needed in nanoseconds)
 echo 1000000 > /sys/class/pwm/pwmchip0/pwm0/period
 # set the duty cycle to 100 us (adjust as needed in nanoseconds)
-echo 100000 > /sys/class/pwm/pwmchip0/pwm0/duty_cycle
+echo 1000 > /sys/class/pwm/pwmchip0/pwm0/duty_cycle
 
 echo auto > /sys/class/pwm/pwmchip0/pwm0/power/control
-
-sleep 5
-
-echo 0 > /sys/class/pwm/pwmchip0/pwm0/enable
-echo 0 > /sys/class/pwm/pwmchip0/unexport
-
-echo "done..."
