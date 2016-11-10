@@ -1,3 +1,5 @@
+#!/bin/bash
+
 set -eux
 
 PERCDUTY=`expr "$1" \* 1000`
